@@ -1,0 +1,825 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+@import url('https://fonts.googleapis.com/css?family=Lato:900|Nunito');
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+    background-color: rgb(114,0,1);
+}
+
+header {
+    margin: 0 auto;
+    max-width: 1600px;
+    background: rgb(249,4,21); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(249,4,21,1) 0%, rgba(114,0,1,1) 5%, rgba(255,255,255,1) 5%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(249,4,21,1) 0%,rgba(114,0,1,1) 5%,rgba(255,255,255,1) 5%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(249,4,21,1) 0%,rgba(114,0,1,1) 5%,rgba(255,255,255,1) 5%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f90415', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    padding: .6vw 2vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}  
+
+header h1 {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(209, 37, 37);;
+    font-size: 32px;
+    margin-bottom: -1vw;
+}
+
+header img {
+    height: 64px;
+    display: block;
+    margin: 20px 0 0;
+}
+
+header h4 {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(97, 97, 97);
+    font-size: 22px;
+    margin-top: -8px;
+}
+
+.mainbutton {
+    font-family: 'Nunito', sans-serif;
+    margin: 2vw 0;
+    padding: 8px 22px;
+    background-color: rgb(245, 245, 245);
+    border: rgb(196, 29, 29) 2px solid;
+    border-radius: 5px;
+    color: rgb(66, 66, 66);
+    text-decoration: none;
+    transition: .1s;
+    float: right;
+    margin-left: .4vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.mobilebutton {
+    display: none;
+}
+
+.mainbutton:hover {
+    background-color: rgb(196, 29, 29);
+    color: rgb(245, 245, 245);
+}
+
+a.topicon {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(245, 245, 245);
+    display: inline;
+    font-size: 16px;
+    transition: .2s;
+    display: inline;
+    margin-right: 5px;
+}
+
+a.topicon:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+header nav {
+    background: rgb(249,4,21); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(249,4,21,1) 0%, rgba(114,0,1,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(249,4,21,1) 0%,rgba(114,0,1,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(249,4,21,1) 0%,rgba(114,0,1,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f90415', endColorstr='#720001',GradientType=0 ); /* IE6-9 */
+    padding: .2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: .2vw;
+    margin-top: -20px;
+}
+
+nav a:hover {
+    color: rgb(245, 245, 245);
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: .5vw 0;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(224, 224, 224);
+    font-size: 24px;
+    text-decoration: none;
+    transition: .2s;
+    width: 100%;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(167, 167, 167);
+    min-width: 100%;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(126, 21, 21)}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.5);;
+    color: white;
+}
+
+.headerimg {
+    background-image: url("https://images.pexels.com/photos/619418/pexels-photo-619418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 200px;
+    max-height: 600px;
+    margin-top: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.headerimg h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: calc(32px + 2vw);
+    color: rgb(245, 245, 245);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 0 2vw;
+}
+
+.headerimg p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(209, 37, 37);;
+    margin: 0 2vw;
+    width: 20vw;
+    padding: .8vw 1.4vw;
+}
+
+.headerimg a {
+    font-family: 'Nunito', sans-serif;
+    margin: 2vw;
+    padding: .4vw 1.4vw;
+    background-color: rgb(245, 245, 245);
+    color: rgb(209, 37, 37);;
+    text-decoration: none;
+    transition: .1s;
+}
+
+.headerimg a:hover {
+    background-color: rgb(126, 21, 21);
+    color: rgb(245, 245, 245);
+}
+
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2vw;
+    padding: 1vw 2vw;
+    background-color: rgb(240, 240, 240);
+}
+
+.smallsection {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.smallsection h2 {
+    font-size: 90px;
+}
+
+section div {
+    background-color: rgb(240, 240, 240);
+    padding: .5vw 2vw;
+    transition: .1s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section div:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+section img {
+    width: 100%;
+}
+
+section h1 {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(209, 37, 37);;
+    font-size: 28px;
+}
+
+section h2 {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(209, 37, 37);
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    transition: .1s;
+}
+
+section div:hover h2 {
+    transform: scale(1.25);
+}
+
+
+section p {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(66, 66, 66);
+    font-size: 22px;
+}
+
+section a {
+    display: block;
+    width: fit-content;
+    font-family: 'Nunito', sans-serif;
+    margin: 2vw 0;
+    padding: 8px 22px;
+    background-color: rgb(209, 37, 37);
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    transition: .1s;
+    font-size: 20px;
+    border-radius: 32px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: right;
+}
+
+section a:hover {
+    background-color: rgb(114,0,1);
+    color: rgb(245, 245, 245);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+
+article {
+    max-width: 1600px;
+    padding: 2vw;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+}
+
+article h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: calc(32px + 2vw);
+    color: rgb(209, 37, 37);;
+    margin: 0 2vw;
+}
+
+/* Icons */
+article h2 {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(209, 37, 37);
+    font-size: calc(40px + 6vw);
+    float: right;
+    margin: 1vw 2vw;
+    transition: .1s;
+    margin-bottom: 0;
+}
+
+article h3 {
+    background-color: rgb(126, 21, 21);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: rgb(245, 245, 245);
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    padding: .3vw;
+    margin: .5vw 0;
+}
+
+article h4 {
+    background-color: rgb(209, 37, 37);
+    color: rgb(245, 245, 245);
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    padding: .3vw;
+    margin: .5vw 0;
+}
+
+article .main {
+    padding: 1vw;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article .divider {
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1vw 2vw;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+article p {
+    font-family: 'Nunito', sans-serif;
+    color: rgb(66, 66, 66);
+    font-size: 22px;
+}
+
+article p strong {
+    color: rgb(114,0,1);
+    font-weight: bold;
+
+}
+
+article a {
+    display: block;
+    width: fit-content;
+    font-family: 'Nunito', sans-serif;
+    margin: 2vw 0;
+    padding: 8px 22px;
+    background-color: rgb(209, 37, 37);
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    transition: .1s;
+    font-size: 20px;
+    border-radius: 32px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article a:hover {
+    background-color: rgb(114,0,1);
+    color: rgb(245, 245, 245);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(209, 37, 37);
+    padding: 1vw 12vw 3vw;
+    margin-top: 1vw;
+    background-color: rgb(209, 37, 37);
+    border-top: rgb(170, 43, 43) 12px solid;
+}
+
+footer h1 {
+    text-align: right;
+    border-bottom: 6px white solid;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(240, 240, 240);
+    font-size: 18px;
+}
+
+footer a {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(240, 240, 240);
+    font-size: 14px;
+    text-decoration: none;
+    padding: .1vw 0;
+    transition: .2s;
+}
+
+footer a i {
+    font-size: 24px;
+   vertical-align: bottom;
+}
+
+footer a:hover {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+    padding: .1vw 0;
+}
+
+@media only screen and (max-width: 1400px) {
+    section {
+        padding: 1vw 2vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 1vw 6vw 3vw;
+    }
+
+    section {
+        padding: 1vw;
+    }
+    
+    article {
+        padding: 2vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    article {
+        padding: 0;
+    }
+
+    section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .headerimg p {
+        width: 40vw;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 1vw 6vw 3vw;
+    }
+    article h2 {
+        font-size: calc(20px + 6vw);
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .smallsection {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+    .mainbutton {
+        display: none;
+    }
+
+    .mobilebutton {
+        font-family: 'Nunito', sans-serif;
+        margin: 2vw 0;
+        padding: 8px 22px;
+        background-color: rgb(245, 245, 245);
+        border: rgb(196, 29, 29) 2px solid;
+        border-radius: 5px;
+        color: rgb(66, 66, 66);
+        text-decoration: none;
+        transition: .1s;
+        float: right;
+        margin-left: .4vw;
+        display: block;
+        padding: 0 8px;
+        color: white;
+        background-color: rgb(196, 29, 29);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 32px;
+    }
+
+    article h2 {
+        float: none;
+        text-align: center;
+        font-size: calc(72px + 6vw);
+        margin: 1vw;
+    }
+
+    article .divider {
+        grid-template-columns: 1fr;
+    }
+
+    header nav {
+        display: none;
+    }
+    
+    .headerimg {
+        margin-top: -20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .headerimg p {
+        width: 75vw;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 1vw 6vw 3vw;
+    }
+
+    header img {
+        height: 48px;
+    }
+
+    .smallsection {
+        grid-template-columns: 1fr;
+    }
+}
+
+.smallmobile {
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+    header img {
+        margin: 20px auto;
+        margin-top: 80px;
+    }
+
+    header h4 {
+        text-align: center;
+        margin: -24px auto 10px;
+        font-size: 16px;
+        margin-right: 2vw;
+    }
+
+    a.topicon {
+        display: none;
+    }
+
+    .smallmobile {
+        display: block;
+    }
+
+    .headerimg {
+        margin-top: 10px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
